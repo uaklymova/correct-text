@@ -2,17 +2,10 @@ const estimate = require('../main');
 const fs = require('fs')
 const MockDate = require('mockdate');
 
-// jest.mock('moment', () => {
-//   return () => jest.requireActual('moment')('2020-10-15T00:00:00.000Z');
-// });
-
-// MockDate.set(1602417600000); // 11.10 Sun 15.00
-
 describe("Test week days", () => {
   test('Monday under 10am DOCX', async() => {
     MockDate.set(1601877600000); // 5.10.2020 Mon 09.00
     const file = fs.readFileSync(__dirname +'/../samples/sample.docx');
-    // const a = fs.readFileSync('../../../../Downloads/Bovt.docx')
     const res = await estimate(file, 'ua');
     expect(res).toHaveProperty('cost', 413.15);
     expect(res).toHaveProperty('deadline', 'Mon Oct 05 2020 17:00:00 GMT+0300');
