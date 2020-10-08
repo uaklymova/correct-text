@@ -1,0 +1,20 @@
+{
+  "name": "correct-text",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@gmr-fms/word-extractor": "^0.3.0",
+    "@types/textract": "^2.4.0",
+    "file-type": "^15.0.1",
+    "jest": "^26.4.2",
+    "mockdate": "^3.0.2",
+    "moment": "^2.29.0",
+    "textract": "^2.5.0"
+  }
+}
