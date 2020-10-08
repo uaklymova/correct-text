@@ -1,3 +1,2 @@
 # correct-text
-npm i 
-npm run test
+npm i => npm run test
